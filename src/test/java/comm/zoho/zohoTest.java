@@ -27,8 +27,8 @@
 //
 //	WebDriver driver = null;
 //	WebDriverWait wait = null;
-//	String path = "/Users/owner/Desktop/Selenium/testing-maven/ZohoProblem/src/test/java/comm/zoho/zoho.properties";
-//	String excelPath="/Users/owner/Desktop/ExcelDataForTesting/zohoData.xlsx";
+//	String path = "./src/test/resources/prints.log";
+//	String excelPath="./src/test/resources/zohoData.xlsx";
 //	Properties prop;
 //	Logger log = LogManager.getLogger(zohoTest.class.getName());
 //	Xls_Reader data = new Xls_Reader(excelPath);
@@ -138,9 +138,9 @@ public class zohoTest {
 	public void loginTest() throws IOException  {
 		
 		Properties prop = new Properties();
-		FileInputStream ip = new FileInputStream("/Users/owner/Desktop/Selenium/testing-maven/ZohoProblem/src/test/java/comm/zoho/zoho.properties");
+		FileInputStream ip = new FileInputStream("./src/test/java/comm/zoho/zoho.properties");
 		prop.load(ip);
-		Xls_Reader xlBook = new Xls_Reader("/Users/owner/Desktop/Selenium/testing-maven/ZohoProblem/src/test/resources/zohoData.xlsx");
+		Xls_Reader xlBook = new Xls_Reader("./src/test/resources/zohoData.xlsx");
 		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
