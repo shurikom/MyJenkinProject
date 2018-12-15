@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
+
+
   <Appenders>
-      <RollingFile name="File" fileName="/Users/owner/Desktop/Selenium/testing-maven/ZohoProblem/src/test/resources/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
-        <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-         <SizeBasedTriggeringPolicy size="500000" />
-    </RollingFile>
-    
+
+          <RollingFile name="File" fileName="./src/test/resources/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <SizeBasedTriggeringPolicy size="50000000000000" />
+          </RollingFile>
+
     <Console name="Console" target="SYSTEM_OUT">
       <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
     </Console>
-    
   </Appenders>
-  
   <Loggers>
-    <Logger name="comm.zoho.zohoTest" level="trace" additivity="false">  <!-- it should be trace because we wrote log.debug -->
+
+      <Logger name="comm.zoho" level="trace" additivity="false">
       <AppenderRef ref="File"/>
     </Logger>
-    <Root level="error">
-      <AppenderRef ref="Console"/> 
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
     </Root>
   </Loggers>
 </Configuration>
