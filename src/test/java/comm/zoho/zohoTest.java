@@ -125,10 +125,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class zohoTest {
-	WebDriver driver;
+	//WebDriver driver;
 	
 	Logger log = LogManager.getLogger(zohoTest.class.getName());
-	WebDriverWait wait = null;
+	//WebDriverWait wait = null;
 	@AfterTest
 	public void after() {
 		driver.quit();
